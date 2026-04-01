@@ -251,6 +251,21 @@ const App: React.FC = () => {
               onClick={() => setShowNotif(v => !v)}
               title="Notifications"
             >
+
+              {showNotif && (
+                <div style={{
+                  position: 'absolute',
+                  top: 60,
+                  right: 20,
+                  background: '#111',
+                  padding: 10,
+                  borderRadius: 8,
+                  fontSize: 12
+                }}>
+                  No new notifications
+                </div>
+              )}
+
               <Bell size={18} color="var(--text-secondary)" />
               <span
                 style={{
